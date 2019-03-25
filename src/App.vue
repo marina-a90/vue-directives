@@ -3,7 +3,9 @@
     <!-- <h1>prvi input sa focus directive</h1>
     <single-input-component></single-input-component> -->
     <h1>dva inputa sa focus directive</h1>
-    <two-inputs-component></two-inputs-component>
+    <two-inputs-component v-if="isValid"></two-inputs-component>
+    <!-- <button @click="validateFields">Click me</button> -->
+    <button @click="isValid = !isValid">Click me</button>
   </div>
 </template>
 
@@ -13,9 +15,19 @@ import TwoInputsComponent from "./components/TwoInputsComponent.vue";
 
 export default {
   name: "app",
+  data() {
+    return {
+      isValid: true
+    };
+  },
   components: {
     SingleInputComponent,
     TwoInputsComponent
+  },
+  methods: {
+    // validateFields() {
+    //   this.isValid = !this.isValid;
+    // }
   }
 };
 </script>

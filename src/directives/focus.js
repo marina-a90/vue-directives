@@ -1,19 +1,22 @@
 exports.install = function(Vue) {
   Vue.directive("focus", {
-    inserted(el, binding) {
+    inserted(el, binding, vnode) {
+      console.log(vnode);
       if (!binding.value) {
         return;
       }
-      console.log(binding);
-      console.log("komponenta se inicijalizovala");
+
       el.focus();
     },
-    update(el, binding) {
+    componentUpdate(el, binding) {
       if (!binding.value) {
         return;
       }
-      console.log(binding);
+
       el.focus();
+    },
+    unbind(el, binding) {
+      console.log(el);
     }
   });
 };
