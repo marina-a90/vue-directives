@@ -9,6 +9,10 @@ exports.install = function(Vue) {
       el.focus();
     },
     update(el, binding) {
+      if (!binding.value) {
+        return;
+      }
+      console.log(binding);
       el.focus();
     }
   });
