@@ -7,11 +7,15 @@ import BootstrapVue from "bootstrap-vue";
 
 import focus from "./directives/focus.js";
 
+import { GradientGenerator } from "./helpers/GradientGenerator.js";
+
 Vue.config.productionTip = false;
 
 Vue.use(BootstrapVue);
 
 Vue.use(focus);
+
+Vue.use(GradientGenerator);
 
 new Vue({
   render: h => h(App)
