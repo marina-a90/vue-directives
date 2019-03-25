@@ -17,6 +17,12 @@ Vue.use(focus);
 
 Vue.use(GradientGenerator);
 
+
+Vue.prototype.$alertMessage = function (message) {
+  alert(message);
+}
+
+
 new Vue({
   render: h => h(App)
 }).$mount("#app");
