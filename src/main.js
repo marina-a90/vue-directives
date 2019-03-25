@@ -9,7 +9,7 @@ import focus from "./directives/focus.js";
 
 Vue.config.productionTip = false;
 
-Vue.use(BootsrapVue);
+Vue.use(BootstrapVue);
 
 Vue.use(focus);
 
